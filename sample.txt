@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="col">
-        <h3> <B>craving point</B></h3>
+        <h3> <B>craving point </B></h3>
         <h3 style="float: right;position:relative; bottom:30pt;right:150pt">login</h3>
         <h3 style="position: relative; left:800pt;bottom: 19pt;"><input type="email" placeholder="create account"></h3>
     </div>

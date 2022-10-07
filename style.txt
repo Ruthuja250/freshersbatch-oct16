@@ -1,0 +1,37 @@
+body{
+            margin:0;
+            padding:0;
+        }
+        .col{
+            margin:0pt;
+            height:35pt;
+            background-color: red;
+
+        }
+        .col1{
+            margin: 50px;;
+            width:200pt;
+            background-color: whitesmoke;
+            nav-right: 5pt;
+            border-bottom: black 5pt;
+        }
+        .col2{
+            margin:10pt;
+            width:500pt;
+            height:120pt;
+            background-color:whitesmoke;
+            float:right ;
+            position: relative;
+            bottom: 350pt;
+            right: 120pt;
+        }
+        .col3{
+            margin:10pt;
+            width:500pt;
+            height:120pt;
+            background-color:white;
+            float:right ;
+            position: relative;
+            bottom: 350pt;
+            right: 120pt;
+        }
