@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="discription" content="zomato">
+    
+</head>
+<body>
+    <div class="col">
+        <h3> <B>craving point</B></h3>
+        <h3 style="float: right;position:relative; bottom:30pt;right:150pt">login</h3>
+        <h3 style="position: relative; left:800pt;bottom: 19pt;"><input type="email" placeholder="create account"></h3>
+    </div>
+    <br>
+    <b style="font-size: 40pt;">Breakfast Places in Mumbai</b>
+        <div class="col1">
+        <b>Filters</b><br>
+         <b> Search Locations</b>
+          <select >
+              <option></option>
+              <option>HYDERABAD</option>
+              <option>MUMBAI</option>
+              <option>PUNE</option>
+              <option>BANGLORE</option>
+              <option>CHENNAI</option> 
+          </select> 
+           <br> <br><b>Cuisine</b>
+           <h5><input type="checkbox" > North India<br>
+           <input type="checkbox">South India<br>
+           <input type="checkbox">Fast food<br>
+           <input type="checkbox">Chineese<br>
+           <input type="checkbox">breakfast</h5>
+           <b>Cost for two</b>
+           <h5><input type="checkbox">less than 500<br>
+           <input type="checkbox">500to 1000<br>
+           <input type="checkbox">1000to 2000<br>
+           <input type="checkbox">2000to 3000<br>
+           <input type="checkbox">more than 4000</h5>
+           <b>Sort</b>
+           <h5><input type="checkbox"> Price low to high
+        <br><input type="checkbox"> price high to low</h5>
+    </div>
+    <div class=col2 >
+        <b> Result :- </b><br>
+         <img src="C:\Users\Kople Computers\Desktop\food.png" width="100pt" height="100pt" >&nbsp;
+          <B style="padding-left:50pt ;margin-top: 100pt; position: relative; bottom:50pt;">THE DESI BAKERY</B>
+         <h5>meera road,mumbai</h5>
+         <h5 style="padding-left: 390pt; padding-bottom: 300pt; position: relative;bottom: 120pt;">Cuisine <br>cuisines:  bakery
+            <br>cost for two: Rs 700
+            <br>Order type: online order</h5>
+         <br> 
+         </b>
+     </div> 
+     <div class=col3 >
+        <b> Result :- </b><br>
+         <img src="C:\Users\Kople Computers\Desktop\food.png" width="100pt" height="100pt" >&nbsp;
+          <B style="padding-left:50pt ;margin-top: 100pt; position: relative; bottom:50pt;">THE MAGIC BAKERY</B>
+         <h5>gandhi nagar ,hyderabad</h5>
+          <h5 style="padding-left: 390pt; padding-bottom: 300pt; position: relative;bottom: 120pt;">Cuisine <br>cuisines:  bakery
+             <br>cost for two: Rs 900
+             <br>Order type: online order</h5>
+         <br> 
+         </b>
+      </div> 
+</body>
