@@ -1,0 +1,7 @@
+C:\Users\Kople Computers\Documents\c# assignments\assignment1\assignment5\assignment5\bin\Debug\assignment5.exe.config
+C:\Users\Kople Computers\Documents\c# assignments\assignment1\assignment5\assignment5\bin\Debug\assignment5.exe
+C:\Users\Kople Computers\Documents\c# assignments\assignment1\assignment5\assignment5\bin\Debug\assignment5.pdb
+C:\Users\Kople Computers\Documents\c# assignments\assignment1\assignment5\assignment5\obj\Debug\assignment5.csproj.AssemblyReference.cache
+C:\Users\Kople Computers\Documents\c# assignments\assignment1\assignment5\assignment5\obj\Debug\assignment5.csproj.CoreCompileInputs.cache
+C:\Users\Kople Computers\Documents\c# assignments\assignment1\assignment5\assignment5\obj\Debug\assignment5.exe
+C:\Users\Kople Computers\Documents\c# assignments\assignment1\assignment5\assignment5\obj\Debug\assignment5.pdb
