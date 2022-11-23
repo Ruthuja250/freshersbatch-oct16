@@ -1,0 +1,207 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Linqproject
+{
+class Employee
+{
+public int Employee_ID{get;set;}
+public string FirstName{get;set;}
+public string LastName{get;set;}
+public string Title{get;set;}
+public int DOB{get;set;}
+public int DOJ{get;set;}
+public string city{get;set;}
+}
+class program
+{
+static void Main(string[]args)
+{
+/*List<Employee> Emplist=new List<Employee>();*/
+Employee e1=new Employee{Employee_ID =1001 ,FirstName="malcolm",LastName="daruwalla",Title="manager",DOB=1984-11-16,DOJ=2011-06-08,city="Mumbai"};
+Employee e2=new Employee{Employee_ID =1002 ,FirstName="asdin",LastName="dhalla",Title="asstmanager",DOB=1984-08-20,DOJ=2012-07-07,city="Mumbai"};
+Employee e3=new Employee{Employee_ID =1003 ,FirstName="madhavi",LastName="oza",Title="consultant",DOB=1987-11-14,DOJ=2015-04-12,city="pune"};
+Employee e4=new Employee{Employee_ID =1004 ,FirstName="saba",LastName="shaikh",Title="SE",DOB=1990-06-03,DOJ=2016-02-02,city="pune"};
+Employee e5=new Employee{Employee_ID =1005 ,FirstName="nazia",LastName="shaikh",Title="SE",DOB=1991-03-08,DOJ=2016-02-02,city="Mumbai"};
+Employee e6=new Employee{Employee_ID =1006 ,FirstName="amit",LastName="pathak",Title="consultant",DOB=1989-11-07,DOJ=2014-08-08,city="chennai"};
+Employee e7=new Employee{Employee_ID =1007 ,FirstName="vijay",LastName="natrajan",Title="consultant",DOB=1989-12-02,DOJ=2015-06-01,city="Mumbai"};
+Employee e8=new Employee{Employee_ID =1008 ,FirstName="rahul",LastName="dubey",Title="associate",DOB=1983-11-11,DOJ=2014-11-06,city="chennai"};
+Employee e9=new Employee{Employee_ID =1009 ,FirstName="suresh",LastName="mistry",Title="associate",DOB=1992-08-12,DOJ=2014-12-03,city="chennai"};
+Employee e10=new Employee{Employee_ID =1010 ,FirstName="sumit",LastName="shah",Title="manager",DOB=1991-04-12,DOJ=2016-01-02,city="pune"};
+/*Employee.Add(e1);
+Employee.Add(e2);
+Employee.Add(e3);
+Employee.Add(e4);
+Employee.Add(e5);
+Employee.Add(e6);
+Employee.Add(e7);
+Employee.Add(e8);
+Employee.Add(e9);
+Employee.Add(e10);*/
+List<Employee> Emplist=new List<Employee>(){e1,e2,e3,e4,e5,e6,e7,e8,e9,e10};
+
+/*foreach(Employee obj in Emplist)
+{
+Console.WriteLine(obj.Employee_ID +"  " +obj.FirstName+"  "+obj.LastName+"  "+obj.Title+"  "+obj.DOB+"  "+obj.DOJ+"  "+obj.city+"  ");
+}*/
+
+// query -----1
+Console.WriteLine("1. details of employees  :");
+Console.WriteLine("");
+ var lists1=from i1 in Emplist select i1;
+ foreach(Employee obj in lists1)
+{
+Console.WriteLine(obj.Employee_ID +"  " +obj.FirstName+"  "+obj.LastName+"  "+obj.Title+"  "+obj.DOB+"  "+obj.DOJ+"  "+obj.city+"  ");
+}
+Console.WriteLine(" ");
+
+
+// Query---2
+Console.WriteLine("2. display employee details whose location not mumbai  :");
+Console.WriteLine("");
+var lists2=from i2 in Emplist where i2.city!="Mumbai"  select i2;
+ foreach(Employee obj1 in lists2)
+{
+Console.WriteLine(obj1.Employee_ID +"  " +obj1.FirstName+"  "+obj1.LastName+"  "+obj1.Title+"  "+obj1.DOB+"  "+obj1.DOJ+"  "+obj1.city+"  ");
+}
+Console.WriteLine(" ");
+
+
+// Query---3
+Console.WriteLine("3. display employee details whose title is asstmanage  :");
+Console.WriteLine("");
+var lists3=from i3 in Emplist where i3.Title.Equals("asstmanager")  select i3;
+ foreach(Employee obj2 in lists3)
+{
+Console.WriteLine(obj2.Employee_ID +"  " +obj2.FirstName+"  "+obj2.LastName+"  "+obj2.Title+"  "+obj2.DOB+"  "+obj2.DOJ+"  "+obj2.city+"  ");
+}
+Console.WriteLine(" ");
+
+
+// Query---4
+Console.WriteLine("4. display employee details whose lastname starts with s  :");
+Console.WriteLine("");
+var lists4=from i4 in Emplist where i4.LastName.StartsWith('s')  select i4;
+ foreach(Employee obj3 in lists4)
+{
+Console.WriteLine(obj3.Employee_ID +"  " +obj3.FirstName+"  "+obj3.LastName+"  "+obj3.Title+"  "+obj3.DOB+"  "+obj3.DOJ+"  "+obj3.city+"  ");
+}
+Console.WriteLine(" ");
+
+
+// Query---5
+Console.WriteLine("5. display employee details who joined before 2015  :");
+Console.WriteLine("");
+var lists5=from i5 in Emplist where i5.DOJ<2015  select i5;
+ foreach(Employee obj4 in lists5)
+{
+Console.WriteLine(obj4.Employee_ID +"  " +obj4.FirstName+"  "+obj4.LastName+"  "+obj4.Title+"  "+obj4.DOB+"  "+obj4.DOJ+"  "+obj4.city+"  ");
+}
+Console.WriteLine(" ");
+
+
+// Query---6
+Console.WriteLine("6. display employee details who dob is 1-1-1990 :");
+Console.WriteLine("");
+var lists6=from i6 in Emplist where i6.DOB.Equals(1990) select i6;
+ foreach(Employee obj5 in lists6)
+{
+Console.WriteLine(obj5.Employee_ID +"  " +obj5.FirstName+"  "+obj5.LastName+"  "+obj5.Title+"  "+obj5.DOB+"  "+obj5.DOJ+"  "+obj5.city+"  ");
+}
+Console.WriteLine(" ");
+
+
+// Query---7
+Console.WriteLine("");
+Console.WriteLine("6. display employee details who t5t3e 5s consultant and associate:");
+var lists7=from i7 in Emplist where i7.Title.Equals("consultant")||i7.Title.Equals("associate") select i7;
+ foreach(Employee obj6 in lists7)
+{
+Console.WriteLine(obj6.Employee_ID +"  " +obj6.FirstName+"  "+obj6.LastName+"  "+obj6.Title+"  "+obj6.DOB+"  "+obj6.DOJ+"  "+obj6.city+"  ");
+}
+Console.WriteLine(" ");
+
+
+// Query---8
+Console.WriteLine("");
+Console.WriteLine("8. display total count of employee :");
+int empcount=Emplist.Count();
+int lists8=(from i8 in Emplist  select i8).Count();
+Console.WriteLine("  no of elements=  "+lists8);
+Console.WriteLine(" ");
+
+
+//query---9
+Console.WriteLine("");
+Console.WriteLine("9. display total count of employee whose city is chennai :");
+int empcount1=Emplist.Count();
+int lists9=(from i9 in Emplist where i9.city.Equals("chennai")   select i9).Count();
+Console.WriteLine("  no of elements=  "+lists9);
+Console.WriteLine(" ");
+
+
+// Query---10
+Console.WriteLine("");
+Console.WriteLine("10. display total count of employee whose city is chennai :");
+var emplist2=Emplist.Max(a=>a.Employee_ID);
+Console.WriteLine("  total count  "+emplist2);
+Console.WriteLine(" ");
+
+
+// Query---11
+Console.WriteLine("");
+Console.WriteLine("11. display total count of employee who joined before 1/1/2015 :");
+var emplist3=Emplist.Count();
+int lists11=(from i11 in Emplist where i11.DOJ>2015 select i11).Count();
+Console.WriteLine("  total count  "+lists11);
+Console.WriteLine(" ");
+
+
+// Query---12
+Console.WriteLine("");
+Console.WriteLine("12. display total count of employee whose title is not associate :");
+int emplist4=Emplist.Count();
+int lists12=(from i12 in Emplist where i12.Title!=("associate") select i12).Count();
+Console.WriteLine("  total count "+lists12);
+Console.WriteLine(" ");
+
+
+// Query---13
+Console.WriteLine("");
+Console.WriteLine("13. display total count of employee based on city :");
+var lists13=from i13 in Emplist group i13 by i13.city;
+ foreach (var obj12 in lists13)
+{
+Console.WriteLine("{0}-{1}",obj12.Key,obj12.Count());
+}
+Console.WriteLine(" ");
+
+
+// Query---14
+Console.WriteLine("");
+Console.WriteLine("14. display total count of employee based on city and title:");
+var lists14 = from i14 in Emplist group i14 by new { i14.city, i14.Title } into t orderby t.Key.city
+select new { city = t.Key.city, Title = t.Key.Title, TotalCount = t.Count() };
+foreach (var obj13 in lists14 )
+{
+if (obj13.TotalCount > 1)
+{
+Console.WriteLine("Total Number of Employee based On City & Title : {0}-{1}-{2}",obj13.city,obj13.Title, obj13.TotalCount);
+}
+}
+
+
+// Query---15
+Console.WriteLine("");
+Console.WriteLine("15. display total count of employee whose  is youngest in list :");
+var emplist6=Emplist.Count();
+int lists15=(from i15 in Emplist where i15.DOJ<1990 select i15).Count();
+Console.WriteLine("  youngest  "+lists15);
+Console.WriteLine(" ");
+
+
+
+}
+}
+}
